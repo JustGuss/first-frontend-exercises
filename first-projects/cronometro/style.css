@@ -1,0 +1,63 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@400;500;800&family=Princess+Sofia&family=Roboto+Mono&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+main {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 50px;
+    font-size: 1.25rem;
+}
+
+h1 {
+    color: #ff7300;
+}
+
+.time {
+    display: flex;
+    font-size: 6rem;
+    color: #803509
+}
+
+.btn {
+    color: #803509;
+    border: 1px solid #5c2510;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    background-color: #fff;
+    padding-inline: 8px;
+    padding-block: 3px;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ff7300;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+::selection {
+    background-color: #ff7300;
+    color: #fff;
+}
+
+
+#resumeBtn{
+    display:none;
+} 
+
+.btn:single-button{
+    background-color: #fff;
+
+}

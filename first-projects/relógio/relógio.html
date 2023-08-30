@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>relógio</title>
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            overflow: hidden;
+            background-color: #1b0c2c;
+            color: #fff;
+            font-family: sans-serif;
+        }
+
+        section {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        div {
+            margin: 10px;
+        }
+
+        #horario {
+            text-align: center;
+            font-size: 2em;
+
+        }
+
+        #imagem {
+            background-color: #ffffff25;
+            width: 370px;
+            border-radius: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            border-radius: 50%;
+            margin: 10px;
+        }
+    </style>
+
+
+</head>
+
+<body onload="carregar()">
+
+    <header style="display: flex; justify-content: center; margin-top:10px;">
+        <h1>relogio</h1>
+    </header>
+
+    <section>
+        <!--horas-->
+        <div id="horario">
+
+        </div>
+
+        <!--foto-->
+        <div id="imagem">
+            <img id="img" src="foto-manha.jpg" width="350px" height="350px">
+            
+        </div>
+        <p id="amor" style="text-align: center;"></p>
+        
+
+    </section>
+
+
+    <!--javascript-->
+
+
+    <script>
+        function carregar() {
+            var foto = document.getElementById('img')
+            var msg = document.getElementById('horario')
+            var teamo = document.getElementById('amor')
+            //  var data = new Date()
+            // var hora = data.getHours()
+            //  var minutos = String(data.getMinutes()).padStart(2,'0')
+             var hora = 10 
+            var minutos = 22
+
+            msg.innerHTML = `${hora}:${minutos}`
+
+            //BOM DIA
+            if (hora >= 9 && hora <= 12) {
+
+                foto.src = 'foto-manha.jgp'
+                document.body.style.background = '#b9846f'
+            }
+            //BOA TARDE
+            else if (hora >= 13 && hora <= 18) {
+
+                foto.src = 'foto-tarde.jpg'
+                document.body.style.background = '#555'
+            }
+            //BOA NOITE
+            else {
+
+                foto.src = 'foto-noite.jpg'
+                document.body.style.background = '#1b0c2c'
+            }
+
+
+        
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

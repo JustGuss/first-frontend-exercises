@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medidor de velocidade</title>
+    <script src="medidorVel.js"></script>
+</head>
+
+<body>
+    <h1>Medidor de Velocidade</h1>
+
+    Velocidade do carro: <input id="velocidade" type="number" style="width:50px;">km/h
+    <input id="verificar" type="button" value="verificar" onclick="calcular()">
+
+    <div id="resultado">
+
+    </div>
+
+
+    <script>
+        function calcular(){
+            var velocidade = document.querySelector('#velocidade');
+            var vel = velocidade.value;
+            var res = document.querySelector('#resultado');
+            if(vel > 60){
+                res.innerHTML = 'MULTADO!'
+                res.innerHTML += ` sua velocidade atual é de ${vel}km/h, você foi multado por excesso de velocidade`
+            } else{
+                res.innerHTML = `sua velocidade atual é de ${vel}km/h, continue dentro do limite de velocidade`
+            }
+
+        }
+
+       
+    </script>
+</body>
+
+</html>
