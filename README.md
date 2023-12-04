@@ -1,2 +1,2 @@
-# my_old_projects
- projects I created when I started studying
+# first-frontend-exercises
+ Exercises I created when I started studying
